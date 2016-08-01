@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TitlesModelStoreContainer" CdmEntityContainer="TitlesDataEntities">
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="TitlesModel.Award">
+        <MappingFragment StoreEntitySet="Award">
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="AwardWon" ColumnName="AwardWon" />
+          <ScalarProperty Name="AwardYear" ColumnName="AwardYear" />
+          <ScalarProperty Name="Award1" ColumnName="Award" />
+          <ScalarProperty Name="AwardCompany" ColumnName="AwardCompany" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="TitlesModel.Genre">
+        <MappingFragment StoreEntitySet="Genre">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtherNames">
+      <EntityTypeMapping TypeName="TitlesModel.OtherName">
+        <MappingFragment StoreEntitySet="OtherName">
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="TitleNameLanguage" ColumnName="TitleNameLanguage" />
+          <ScalarProperty Name="TitleNameType" ColumnName="TitleNameType" />
+          <ScalarProperty Name="TitleNameSortable" ColumnName="TitleNameSortable" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participants">
+      <EntityTypeMapping TypeName="TitlesModel.Participant">
+        <MappingFragment StoreEntitySet="Participant">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParticipantType" ColumnName="ParticipantType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoryLines">
+      <EntityTypeMapping TypeName="TitlesModel.StoryLine">
+        <MappingFragment StoreEntitySet="StoryLine">
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="TitlesModel.Title">
+        <MappingFragment StoreEntitySet="Title">
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="TitleNameSortable" ColumnName="TitleNameSortable" />
+          <ScalarProperty Name="TitleTypeId" ColumnName="TitleTypeId" />
+          <ScalarProperty Name="ReleaseYear" ColumnName="ReleaseYear" />
+          <ScalarProperty Name="ProcessedDateTimeUTC" ColumnName="ProcessedDateTimeUTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TitleGenres">
+      <EntityTypeMapping TypeName="TitlesModel.TitleGenre">
+        <MappingFragment StoreEntitySet="TitleGenre">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TitleParticipants">
+      <EntityTypeMapping TypeName="TitlesModel.TitleParticipant">
+        <MappingFragment StoreEntitySet="TitleParticipant">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TitleId" ColumnName="TitleId" />
+          <ScalarProperty Name="ParticipantId" ColumnName="ParticipantId" />
+          <ScalarProperty Name="IsKey" ColumnName="IsKey" />
+          <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+          <ScalarProperty Name="IsOnScreen" ColumnName="IsOnScreen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Titles</title>
+    <link rel="stylesheet" href="Content/bootstrap.css"/>
+    <link rel="stylesheet" href="Content/ui-bootstrap-csp.css"/>
+</head>
+<body ng-app="app">
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="App/app.js"></script>
+
+    <div ng-controller="TitleController">
+
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+                <h3 class="modal-title">Movie Information</h3>
+            </div>
+            <div class="modal-body">
+                Name: {{title.TitleName}}<br />
+                Genre: {{title.GenreName}}
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+            </div>
+        </script>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <br/><br/>
+                    <div class="pull-right">
+                        <label for="searchname">Search Titles</label>
+                        <input type="text" name="searchname" id="searchname" ng-model="searchstr"/>
+                    </div>
+                    <h2>Titles @ Turner</h2>
+                    <table class="table table-bordered table-condensed table-striped">
+                        <tr>
+                            <th>TitleId</th>
+                            <th>Title Name</th>
+                            <th>Release Year</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr ng-repeat="a in titles">
+                            <td>{{a.TitleId}}</td>
+                            <td>{{a.TitleName}}</td>
+                            <td>{{a.ReleaseYear}}</td>
+                            <td>
+                                <button class="btn btn-default" ng-click="open(a.TitleId)">Open Me!</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

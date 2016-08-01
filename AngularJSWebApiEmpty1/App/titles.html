@@ -1,0 +1,19 @@
+﻿<div ng-controller="TitleController">
+    <table class="table">
+        <tr>
+            <th>TitleId</th>
+            <th>Title Name</th>
+            <th>Sort Name</th>
+            <th>Year Released</th>
+        </tr>
+        <tr ng-repeat="a in titles">
+            <td>{{a.TitleId}}td>
+            <td>{{a.TitleName}}td>
+            <td>
+                {{a.TitleNameSortable}}
+            </td>
+            <td>{{a.ReleaseYear}}</td>
+        </tr>
+    </table>
+
+</div>
